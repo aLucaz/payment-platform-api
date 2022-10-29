@@ -23,3 +23,7 @@ In progress
 ## Project documentation
 
 In progress
+
+## Running
+
+![](resources/server.png)
