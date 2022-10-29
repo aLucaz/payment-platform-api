@@ -3,6 +3,8 @@
 Api layer of a payment platform, this repository is the resource server
 that can be accessed only by clients registered and authorized using JWT.
 
+This server is connected to the [Security Layer](https://github.com/aLucaz/payment-platform-security).
+
 ## Technologies and Concept used
 
 - Oauth2 resource server
