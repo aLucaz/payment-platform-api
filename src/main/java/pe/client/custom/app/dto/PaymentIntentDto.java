@@ -34,4 +34,6 @@ public class PaymentIntentDto {
     @Valid
     @NotNull
     private ClientDto client;
+    @NotNull
+    private String businessApplicationId;
 }

@@ -13,14 +13,42 @@ This server is connected to the [Security Layer](https://github.com/aLucaz/payme
 - Client Credentials Grant Type
 - Java 11
 - OpenAPI 3.0 
+- FeignClient
+- Microservices
+- Docker
+- Kubernetes
+- Circuit breaker
+- Fallbacks
 
 ## Project achitecture
 
-In progress
+![](resources/draw-architecture.png)
 
 ### Project structure
 
-In progress
+```
+./src/main
+├── java
+│   └── pe
+│       └── client
+│           └── custom
+│               └── app
+│                   ├── choice
+│                   ├── client
+│                   │   └── fallback
+│                   ├── config
+│                   ├── controller
+│                   ├── dto
+│                   ├── service
+│                   │   └── impl
+│                   ├── util
+│                   │   └── constant
+│                   └── validation
+│                       └── annotation
+└── resources
+    ├── static
+    └── templates
+```
 
 ## Project documentation
 

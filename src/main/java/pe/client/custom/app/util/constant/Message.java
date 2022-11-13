@@ -7,4 +7,6 @@ public class Message {
     public static final String MSG_CURRENCY_WRONG = "El tipo de moneda no es válido";
     public static final String MSG_CARD_MONTH_WRONG = "El mes de expiracion de tarjera no es válido";
     public static final String MSG_CARD_YEAR_WRONG = "El año de expiracion de tarjera no es válido";
+    public static final String UNKNOWN_ERROR_LOG = "Unknown error ocurred";
+    public static final String TRANSACTION_COMPLETED = "Transaction successfully completed";
 }
