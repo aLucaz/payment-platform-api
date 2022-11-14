@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Data
 @Configuration
-@ConfigurationProperties(prefix = "security.client.info")
+@ConfigurationProperties(prefix = "security.client.bank.info")
 public class SecurityClientInfo {
     private String grantType;
     private String scope;

@@ -13,7 +13,7 @@ import java.util.Map;
 @Qualifier("bankFallback")
 public class BankServiceFallback implements BankFeignClient {
     @Override
-    public JsonNode transfer(Map<String, Object> body, Map<String, String> headers) {
+    public JsonNode transfer(Map<String, Object> body, Map<String, Object> headers) {
         log.info("Fallback called");
         return null;
     }

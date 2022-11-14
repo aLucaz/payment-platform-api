@@ -35,7 +35,7 @@ public class SecurityServiceImpl implements SecurityService {
     public String getToken() {
         var params = getSecurityParams();
         var headers = getHeaders();
-        JsonNode response = callFeignClient(params, headers);
+        JsonNode response = callSecurityLayer(params, headers);
         log.info("Security Token Obtained correctly");
         return JsonUtil.getField("access_token", response);
     }
@@ -49,12 +49,13 @@ public class SecurityServiceImpl implements SecurityService {
 
     private Map<String, Object> getHeaders() {
         Map<String, Object> headers = new HashMap<>();
+        // only authorized calls are allowed
         headers.put(Header.X_AUTHORIZATION, "Basic " + securityClientInfo.getAuthorizationToken());
         headers.put(Header.CONTENT_TYPE, MediaType.APPLICATION_FORM_URLENCODED_VALUE);
         return headers;
     }
 
-    private JsonNode callFeignClient(Map<String, Object> params, Map<String, Object> headers) {
+    private JsonNode callSecurityLayer(Map<String, Object> params, Map<String, Object> headers) {
         try {
             return this.securityFeignClient.getToken(params, headers);
         } catch (FeignException.ServiceUnavailable ex) {
