@@ -42,7 +42,7 @@ public class SimplePaymentServiceImpl implements PaymentService {
     private Map<String, Object> getPayHeaders() {
         Map<String, Object> headers = new HashMap<>();
         headers.put(Header.X_AUTHORIZATION, "Bearer " + securityService.getToken());
-        headers.put(Header.CONTENT_TYPE, MediaType.APPLICATION_FORM_URLENCODED_VALUE);
+        headers.put(Header.CONTENT_TYPE, MediaType.APPLICATION_JSON);
         return headers;
     }
 
